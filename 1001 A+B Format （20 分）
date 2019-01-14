@@ -7,14 +7,14 @@ int main() {
 	int a, b;
 	scanf("%d %d", &a, &b);
 	int sum = a + b;
-	if(sum < 0){ //¸ºÊıÔòÊä³ö¸ººÅ£¬²¢ÇÒ½«ºÍ×ª±äÎªÕıÊı£¨³ıÈ¥·ûºÅ¸ü·½±ã´¦Àí£© 
+	if(sum < 0){ //è´Ÿæ•°åˆ™è¾“å‡ºè´Ÿå·ï¼Œå¹¶ä¸”å°†å’Œè½¬å˜ä¸ºæ­£æ•°ï¼ˆé™¤å»ç¬¦å·æ›´æ–¹ä¾¿å¤„ç†ï¼‰ 
 		printf("-");
 		sum = -sum;
 	}
 	string result, tempStr = to_string(sum);
 	int cnt = 0;
 	for(int i = tempStr.length() - 1; i >= 0; i--, cnt++){
-		if(cnt != 0 && cnt % 3 == 0){ //Ã¿¸ô3Î»¼ÓÉÏÒ»¸ö"," 
+		if(cnt != 0 && cnt % 3 == 0){ //æ¯éš”3ä½åŠ ä¸Šä¸€ä¸ª"," 
 			result += ',';
 		}
 		result += tempStr[i];
