@@ -13,13 +13,11 @@ int main(int argc, char** argv) {
 	scanf("%d", &K1);
 	while(K1--){
 		scanf("%d %lf", &expo, &coef);
-		if(coef == 0.0) continue;
 		poly[expo] = coef;
 	}
 	scanf("%d", &K2);
 	while(K2--){
 		scanf("%d %lf", &expo, &coef);
-		if(coef == 0.0) continue;
 		for(map<int, double>::iterator it = poly.begin(); it != poly.end(); it++){
 			polyResult[expo + it->first] += coef * it->second; 
 		}
